@@ -118,8 +118,6 @@ class Parser:
     def parse_term(self):
         name = self.consume("IDENT")
 
-        # Treat x, y, z as variables.
-        # Everything else is treated as a constant.
         if name in ["x", "y", "z"]:
             return Var(name)
 
